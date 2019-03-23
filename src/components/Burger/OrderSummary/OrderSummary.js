@@ -1,5 +1,4 @@
 import React from 'react';
-import Aux from '../../../hoc/Aux';
 import Button from '../../UI/Button/Button';
 
 const orderSummary = (props) => {
@@ -15,7 +14,7 @@ const orderSummary = (props) => {
         } );          
 
     return (
-        <Aux>
+        <>
             <h3>Your Modal</h3>
             <p>A delicious burger with the following ingredients:</p>
             <ul>
@@ -25,7 +24,7 @@ const orderSummary = (props) => {
             <p>Continue to Checkout?</p>
             <Button btnType='Danger' clicked={ props.purchasedCancelled }>CANCEL</Button>
             <Button btnType='Success' clicked={ props.purchaseContinues }>CONTINUE</Button>
-        </Aux>
+        </>
     );
 }
 

@@ -3,7 +3,6 @@ import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
 import styles from './SideDrawer.module.css';
 import Backdrop from '../../UI/Backdrop/Backdrop';
-import Aux from '../../../hoc/Aux';
 
 const sideDrawer = (props) => {
     let attachedclasses = [styles.SideDrawer, styles.Close];
@@ -11,7 +10,7 @@ const sideDrawer = (props) => {
         attachedclasses = [styles.SideDrawer, styles.Open]
     }    
     return (
-        <Aux>
+        <>
             <Backdrop show= { props.open } clicked= { props.closed }/>
             <div className={ attachedclasses.join(' ') }>
                 <div className={ styles.Logo }>
@@ -21,7 +20,7 @@ const sideDrawer = (props) => {
                     <NavigationItems />
                 </nav>
             </div>
-        </Aux>
+        </>
         
     );
 };
